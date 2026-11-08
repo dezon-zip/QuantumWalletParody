@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="ReNest One: the most scalable stack by a quantum leap. (It isn't real.)"
+    />
+    <title>ReNest One</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500&family=Sora:wght@300;400&display=swap"
+    />
+    <script type="module" crossorigin src="./assets/index-COGJrX7a.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DI0Fjuhd.css">
+  </head>
+  <body>
+    <div id="bg"><div class="blobs" id="blobs"></div></div>
+    <canvas id="stars"></canvas>
+    <canvas id="gl"></canvas>
+    <div id="grain"></div>
+
+    <div id="ui">
+      <div class="logo">
+        ReNest<br />One
+        <svg viewBox="0 0 14 14"><polygon points="3.5,0 10.5,0 14,7 10.5,14 3.5,14 0,7" /></svg>
+      </div>
+      <div class="topright">
+        <a class="hb" href="#end" id="join">
+          <svg viewBox="0 0 14 34"><polyline points="14,1 1,17 14,33" /></svg>
+          <span>Join waitlist</span>
+          <svg viewBox="0 0 14 34"><polyline points="0,1 13,17 0,33" /></svg>
+        </a>
+      </div>
+      <div id="ruler">
+        <div id="rmark"><i></i><b id="rsize">1.44 MB</b></div>
+      </div>
+      <div id="hint">Scroll</div>
+
+      <!-- blueprint annotations shown during the wireframe chapter -->
+      <svg id="bp" class="ov" viewBox="0 0 100 100" aria-hidden="true">
+        <g>
+          <line x1="9.8" y1="47" x2="27.3" y2="16.7" />
+          <line x1="8.2" y1="46.1" x2="11.4" y2="47.9" />
+          <line x1="25.7" y1="15.8" x2="28.9" y2="17.6" />
+          <text x="12" y="30" transform="rotate(-60 12 30)">Ø 4.4</text>
+        </g>
+        <g>
+          <line x1="90.2" y1="53" x2="72.7" y2="83.3" />
+          <line x1="88.6" y1="52.1" x2="91.8" y2="53.9" />
+          <line x1="71.1" y1="82.4" x2="74.3" y2="84.2" />
+          <text x="82" y="72" transform="rotate(-60 82 72)">R 2.2</text>
+        </g>
+        <line x1="35" y1="8" x2="62" y2="8" />
+        <line x1="35" y1="8" x2="48" y2="8" stroke-width="0.5" stroke="#bbb" />
+        <rect class="fillk" x="49" y="7" width="1.4" height="2" />
+        <g class="ico">
+          <rect x="24.5" y="73.5" width="3.4" height="3.4" />
+          <polyline points="25,75.8 25.9,74.6 26.7,76 27.4,74.8" />
+          <circle cx="26.2" cy="80.6" r="1.7" />
+          <line x1="25.4" y1="81.6" x2="27" y2="79.6" />
+          <rect x="24.5" y="84.4" width="3.4" height="3.4" stroke-dasharray="0.3 0.5" />
+        </g>
+      </svg>
+
+      <div class="ov panel light p-a" id="pa">
+        <h2>Built for the post-boilerplate era</h2>
+        <p>
+          One shell for your React client and your NestJS server. Shared types, one deploy, zero
+          glue code.
+        </p>
+      </div>
+
+      <div class="ov items" id="items">
+        <div>Component-grade shell</div>
+        <div>7-hook quantum chip</div>
+        <div>Dependency injected</div>
+      </div>
+
+      <div
+        class="ov"
+        id="phone"
+        aria-label="Mock ReNest admin dashboard with Cloudflare and Google stats"
+      >
+        <div class="hd"><b>ReNest Admin</b><span class="ok">All systems normal</span></div>
+        <div class="tabs">
+          <span>Overview</span><span>Edge</span><span>Search</span><span>Users</span>
+        </div>
+
+        <div class="kpis">
+          <div class="card kpi">
+            <div class="src"><i class="cf">Cloudflare</i><i>24h</i></div>
+            Requests<strong class="cnt" data-to="1284512" data-f="k">0</strong><em>+8.4%</em>
+          </div>
+          <div class="card kpi">
+            <div class="src"><i class="cf">Cloudflare</i><i>24h</i></div>
+            Cache hit<strong class="cnt" data-to="94.2" data-f="p">0</strong><em>+1.1 pt</em>
+          </div>
+          <div class="card kpi">
+            <div class="src"><i class="gg">Search Console</i><i>28d</i></div>
+            Clicks<strong class="cnt" data-to="18420" data-f="k">0</strong><em>+12%</em>
+          </div>
+          <div class="card kpi">
+            <div class="src"><i class="gg">Analytics</i><i>live</i></div>
+            Active users<strong class="cnt" data-to="1312" data-f="i">0</strong
+            ><em class="dn">-3%</em>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="src"><i class="rn">Traffic</i><i>7 days</i></div>
+          <svg viewBox="0 0 120 34" preserveAspectRatio="none" height="40">
+            <g stroke="#152033" stroke-width="0.3">
+              <line x1="0" y1="8" x2="120" y2="8" />
+              <line x1="0" y1="17" x2="120" y2="17" />
+              <line x1="0" y1="26" x2="120" y2="26" />
+            </g>
+            <polygon
+              fill="rgba(246,160,77,0.13)"
+              points="0,34 0,20 10,18 20,21 30,14 40,16 50,10 60,13 70,8 80,11 90,6 100,9 110,4 120,6 120,34"
+            />
+            <polyline
+              class="sp"
+              pathLength="1"
+              fill="none"
+              stroke="#f6a04d"
+              stroke-width="0.9"
+              points="0,20 10,18 20,21 30,14 40,16 50,10 60,13 70,8 80,11 90,6 100,9 110,4 120,6"
+            />
+            <polyline
+              class="sp"
+              pathLength="1"
+              fill="none"
+              stroke="#7aa8ff"
+              stroke-width="0.9"
+              points="0,29 10,28 20,29 30,26 40,27 50,24 60,25 70,22 80,23 90,21 100,22 110,19 120,20"
+            />
+            <polyline
+              class="sp"
+              pathLength="1"
+              fill="none"
+              stroke="#61dafb"
+              stroke-width="0.6"
+              points="0,31 10,31 20,30 30,30 40,31 50,29 60,30 70,29 80,30 90,29 100,30 110,28 120,29"
+            />
+          </svg>
+          <div class="legend">
+            <span style="color: #f6a04d">Edge</span>
+            <span style="color: #7aa8ff">Organic</span>
+            <span style="color: #61dafb">Origin</span>
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="card bars">
+            <div class="src"><i class="cf">Security</i></div>
+            <div>
+              WAF<u><i style="background: #ff6b81" data-w="82"></i></u><b>2,914</b>
+            </div>
+            <div>
+              Bots<u><i style="background: #f6a04d" data-w="46"></i></u><b>1,207</b>
+            </div>
+            <div>
+              DDoS<u><i style="background: #ffd166" data-w="12"></i></u><b>318</b>
+            </div>
+          </div>
+          <div class="card bars">
+            <div class="src"><i class="gg">Top queries</i></div>
+            <div>
+              guards<u><i style="background: #7aa8ff" data-w="90"></i></u><b>#3.2</b>
+            </div>
+            <div>
+              diffing<u><i style="background: #7aa8ff" data-w="64"></i></u><b>#5.1</b>
+            </div>
+            <div>
+              DI<u><i style="background: #7aa8ff" data-w="38"></i></u><b>#8.7</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="src"><i class="gg">Core Web Vitals</i><i>p75 mobile</i></div>
+          <div class="vit">
+            <div><strong>1.8s</strong>LCP</div>
+            <div><strong>92ms</strong>INP</div>
+            <div><strong>0.03</strong>CLS</div>
+          </div>
+        </div>
+
+        <div class="kpis">
+          <div class="card kpi">
+            <div class="src"><i class="cf">Cloudflare</i><i>30d</i></div>
+            Bandwidth saved<strong class="cnt" data-to="412" data-f="gb">0</strong><em>+19%</em>
+          </div>
+          <div class="card kpi">
+            <div class="src"><i class="gg">Search Console</i><i>now</i></div>
+            Pages indexed<strong class="cnt" data-to="1204" data-f="i">0</strong><em>+36</em>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="src"><i class="rn">NestJS API</i><i>p95</i></div>
+          <table>
+            <tr>
+              <td>GET /users</td>
+              <td>200</td>
+              <td>12 ms</td>
+            </tr>
+            <tr>
+              <td>POST /orders</td>
+              <td>201</td>
+              <td>38 ms</td>
+            </tr>
+            <tr>
+              <td>GET /profile</td>
+              <td>304</td>
+              <td>4 ms</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="src"><i class="rn">Events</i><i>last hour</i></div>
+          <table>
+            <tr>
+              <td><span style="color: #f6a04d">CF</span> WAF blocked SQLi on /orders</td>
+              <td>2m</td>
+            </tr>
+            <tr>
+              <td><span style="color: #7aa8ff">GSC</span> 12 pages newly indexed</td>
+              <td>18m</td>
+            </tr>
+            <tr>
+              <td><span style="color: #61dafb">API</span> Guard rejected 41 tokens</td>
+              <td>34m</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="log">› deploy <b>api@2.4.0</b> ✓ · purge cache ✓ · sitemap pinged ✓</div>
+      </div>
+
+      <div class="ov big2 d-l" id="dl">Impenetrable<br />defense</div>
+      <div class="ov big2 d-r" id="dr">against<br /><em>any threat</em></div>
+
+      <div class="ov panel glass p-e" id="pe">
+        <h2>Unprecedented stability</h2>
+        <p>
+          Strict types end to end and runtime validation on every request. The bugs get caught
+          before your users ever meet them.
+        </p>
+      </div>
+
+      <div class="ov th" id="t1">
+        <div class="rings"><i></i><i></i><i></i></div>
+        <h3>Prop Drilling</h3>
+      </div>
+      <div class="ov th sq" id="t2">
+        <div class="rings"><i></i><i></i><i></i></div>
+        <h3>Circular Dependency</h3>
+      </div>
+      <div class="ov th cr" id="t3">
+        <div class="rings"><i></i><i></i><i></i></div>
+        <h3>Stale Closure</h3>
+      </div>
+
+      <div class="ov big2 f-l" id="fl">The best<br />defense?</div>
+      <div class="ov big2 f-r" id="fr">Guards.</div>
+
+      <div class="ov panel glass p-g" id="pg">
+        <h2>Reconciliation powered</h2>
+        <p>
+          The virtual DOM diffs every update and touches only what changed. Near-zero re-renders
+          make this the lightest stack you could ship.
+        </p>
+      </div>
+
+      <div class="ov panel light p-h" id="ph">
+        <h2>Wait. Is any of this real?</h2>
+        <p>
+          No. ReNest One is imaginary: no shell, no 7-hook chip, and the waitlist doesn't exist.
+          React and NestJS are real, though, and well worth building with. Motion inspired by
+          Quantum Wallet by 14islands.
+        </p>
+        <a class="hb" href="#top" id="totop">
+          <svg viewBox="0 0 14 34"><polyline points="14,1 1,17 14,33" /></svg>
+          <span>Back to top</span>
+          <svg viewBox="0 0 14 34"><polyline points="0,1 13,17 0,33" /></svg>
+        </a>
+      </div>
+    </div>
+
+    <div id="intro">
+      <button class="hb big" id="power" type="button">
+        <svg viewBox="0 0 14 34"><polyline points="14,1 1,17 14,33" /></svg>
+        <span>Boot the stack</span>
+        <svg viewBox="0 0 14 34"><polyline points="0,1 13,17 0,33" /></svg>
+      </button>
+      <button class="skip" id="nosound" type="button">Enter without sound</button>
+    </div>
+
+    <!-- tall spacer: its scroll position drives the whole timeline -->
+    <div id="scroll">
+      <div class="hero">
+        <p class="hl l1"><span class="gh">The most</span><span class="ty"> </span></p>
+        <p class="hl l2"><span class="gh">scalable stack</span><span class="ty"> </span></p>
+        <p class="hl r first"><span class="gh">by a</span><span class="ty"> </span></p>
+        <p class="hl r"><span class="gh">quantum leap</span><span class="ty"> </span></p>
+      </div>
+    </div>
+
+  </body>
+</html>
