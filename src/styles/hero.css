@@ -1,0 +1,68 @@
+/* The headline lives inside the scroll spacer so it scrolls away with the page. */
+.hero {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 46vh;
+}
+
+.hl {
+  position: relative;
+  font: 300 clamp(30px, 4.1vw, 66px)/1.08 var(--font-head);
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* .gh reserves the final width, .ty is where the typewriter writes */
+.hl .gh {
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.hl .ty {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+.hl.l1,
+.hl.l2 {
+  margin-left: max(0px, min(50%, 100% - 8.6em));
+}
+
+.hl.r {
+  text-align: right;
+}
+
+.hl.r.first {
+  margin-top: 5vh;
+}
+
+.hl.r .ty {
+  left: auto;
+  right: 0;
+}
+
+/* glitchy block cursor */
+.blk {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+}
+
+.blk i {
+  position: absolute;
+  width: 0.3em;
+  height: 0.3em;
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  .hl.l1,
+  .hl.l2 {
+    margin-left: max(0px, min(18%, 100% - 8.6em));
+  }
+}

@@ -1,0 +1,183 @@
+/* Chapter overlays. Opacity/visibility/transform are driven from JS. */
+.ov {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.panel {
+  padding: clamp(18px, 2.4vw, 34px);
+  width: min(420px, 100% - 8px);
+}
+
+.panel h2 {
+  font: 400 clamp(22px, 2.3vw, 34px)/1.15 var(--font-body);
+}
+
+.panel p {
+  margin-top: 18px;
+  font-size: clamp(13px, 1.1vw, 15px);
+  opacity: 0.6;
+  font-weight: 300;
+}
+
+.panel.light {
+  background: rgba(240, 240, 242, 0.94);
+  color: #111;
+}
+
+.panel.glass {
+  background: rgba(120, 170, 200, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(190, 220, 255, 0.12);
+  color: #e8f0ff;
+}
+
+.p-a {
+  right: 0;
+  top: 50%;
+  margin-top: -90px;
+}
+
+.p-e {
+  left: 0;
+  bottom: 8vh;
+}
+
+.p-g {
+  right: 0;
+  bottom: 10vh;
+}
+
+.p-h {
+  right: 0;
+  top: 50%;
+  margin-top: -150px;
+}
+
+.p-h .hb {
+  margin-top: 26px;
+  pointer-events: auto;
+}
+
+.items {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(380px, 100% - 8px);
+  background: rgba(240, 240, 242, 0.94);
+  padding: 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.items div {
+  font: 400 clamp(20px, 2vw, 28px)/1.2 var(--font-body);
+  color: #111;
+  opacity: 0.22;
+  transition: opacity 0.35s;
+}
+
+.items div.on {
+  opacity: 1;
+}
+
+/* big split headlines */
+.big2 {
+  font: 300 clamp(30px, 4.3vw, 66px)/1.08 var(--font-head);
+  letter-spacing: -0.01em;
+}
+
+.d-l {
+  left: 4px;
+  top: 56%;
+}
+
+.d-r {
+  right: 4px;
+  top: 66%;
+  text-align: right;
+}
+
+.d-r em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.f-l {
+  left: 4px;
+  top: 38%;
+}
+
+.f-r {
+  right: 4px;
+  top: 38%;
+  color: var(--alert);
+  text-align: right;
+}
+
+/* blueprint annotations */
+#bp {
+  left: 50%;
+  top: 0;
+  height: 100vh;
+  width: 100vh;
+  margin-left: -50vh;
+  stroke: #111;
+  fill: none;
+  stroke-width: 0.14;
+}
+
+#bp text {
+  fill: #111;
+  stroke: none;
+  font: 400 1.6px var(--font-mono);
+}
+
+#bp .ico {
+  stroke-width: 0.18;
+}
+
+#bp .fillk {
+  fill: #111;
+  stroke: none;
+}
+
+@media (max-width: 760px) {
+  .panel,
+  .items {
+    width: calc(100% - 8px);
+  }
+
+  .p-a,
+  .p-e,
+  .p-g,
+  .p-h {
+    top: auto;
+    bottom: 7vh;
+    margin-top: 0;
+    right: auto;
+    left: 0;
+  }
+
+  .items {
+    top: auto;
+    bottom: 7vh;
+    transform: none;
+  }
+
+  .d-l {
+    top: 20%;
+  }
+
+  .d-r {
+    top: 28%;
+  }
+
+  .f-l,
+  .f-r {
+    top: 22%;
+  }
+}

@@ -1,0 +1,241 @@
+/* Mock admin dashboard on a phone */
+#phone {
+  --w: min(300px, 78vw);
+  left: 50%;
+  top: 50%;
+  width: var(--w);
+  aspect-ratio: 9 / 19.5;
+  margin: 0 0 0 calc(var(--w) / -2);
+  transform: translateY(-50%);
+  border-radius: 40px;
+  background: #060a12;
+  border: 2px solid #1b2535;
+  box-shadow:
+    0 0 0 5px #0b111c,
+    0 40px 90px rgba(0, 0, 0, 0.6);
+  padding: 34px 12px 14px;
+  font-family: var(--font-mono);
+  overflow: hidden;
+  color: #9fb3cf;
+  font-size: 7px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* notch */
+#phone::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 74px;
+  height: 18px;
+  margin-left: -37px;
+  border-radius: 99px;
+  background: #000;
+}
+
+#phone .hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#phone .hd b {
+  font: 500 12px/1 var(--font-body);
+  color: #fff;
+}
+
+#phone .ok {
+  color: #4be3a0;
+}
+
+#phone .ok::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4be3a0;
+  margin-right: 4px;
+  box-shadow: 0 0 6px #4be3a0;
+}
+
+#phone .tabs {
+  display: flex;
+  gap: 4px;
+}
+
+#phone .tabs span {
+  border: 1px solid #1d2a3d;
+  border-radius: 99px;
+  padding: 3px 7px;
+}
+
+#phone .tabs span:first-child {
+  background: #e8f0ff;
+  color: #060a12;
+  border-color: #e8f0ff;
+}
+
+#phone .card {
+  background: #0b111c;
+  border: 1px solid #152033;
+  border-radius: 9px;
+  padding: 7px 8px;
+}
+
+#phone .src {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 6px;
+  opacity: 0.75;
+  margin-bottom: 4px;
+}
+
+#phone .src i {
+  font-style: normal;
+}
+
+#phone .src .cf {
+  color: #f6a04d;
+}
+
+#phone .src .gg {
+  color: #7aa8ff;
+}
+
+#phone .src .rn {
+  color: #61dafb;
+}
+
+#phone .kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+#phone .kpi strong {
+  display: block;
+  font: 400 14px/1.15 var(--font-mono);
+  color: #fff;
+}
+
+#phone .kpi em {
+  font-style: normal;
+  color: #4be3a0;
+}
+
+#phone .kpi em.dn {
+  color: #ff6b81;
+}
+
+#phone svg {
+  display: block;
+  width: 100%;
+}
+
+#phone .legend {
+  display: flex;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+#phone .legend span::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 2px;
+  margin-right: 3px;
+  vertical-align: middle;
+  background: currentColor;
+}
+
+#phone .two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+#phone .bars div {
+  display: grid;
+  grid-template-columns: 34px 1fr 26px;
+  align-items: center;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+#phone .bars u {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: #152033;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+#phone .bars u i {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+}
+
+#phone .bars b {
+  font-weight: 400;
+  color: #fff;
+  text-align: right;
+}
+
+#phone .vit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  text-align: center;
+}
+
+#phone .vit div {
+  border-radius: 6px;
+  background: rgba(75, 227, 160, 0.08);
+  padding: 4px 0;
+}
+
+#phone .vit strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: #4be3a0;
+}
+
+#phone table {
+  width: 100%;
+  border-collapse: collapse;
+  font: inherit;
+  color: inherit;
+}
+
+#phone td {
+  padding: 2.5px 0;
+  border-top: 1px solid #131c2b;
+}
+
+#phone td:last-child,
+#phone td:nth-child(2) {
+  text-align: right;
+  color: #fff;
+}
+
+#phone .log {
+  color: #6f84a3;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#phone .log b {
+  color: #4be3a0;
+  font-weight: 400;
+}

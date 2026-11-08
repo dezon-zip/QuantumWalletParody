@@ -1,0 +1,32 @@
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  color: #bcd0ee;
+}
+
+#intro .skip {
+  background: none;
+  border: 0;
+  color: inherit;
+  opacity: 0.55;
+  font: 400 16px/1 var(--font-body);
+  cursor: pointer;
+  padding: 8px;
+}
+
+#intro .skip:hover {
+  opacity: 0.9;
+}
+
+#intro.gone {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.8s,
+    visibility 0.8s;
+}

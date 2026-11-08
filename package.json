@@ -1,0 +1,24 @@
+{
+  "name": "renest-one",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A scroll-driven parody landing page for an imaginary React + NestJS device.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "three": "0.128.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.9.10",
+    "vite": "^8.3.6"
+  }
+}

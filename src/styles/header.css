@@ -1,0 +1,124 @@
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  font: 400 17px/1.05 var(--font-head);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.logo svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  align-self: flex-end;
+}
+
+.topright {
+  position: absolute;
+  top: 18px;
+  right: 4px;
+  pointer-events: auto;
+}
+
+/* bracketed "< label >" button */
+.hb {
+  display: inline-flex;
+  align-items: stretch;
+  height: 34px;
+  font: 400 15px/1 var(--font-body);
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hb span {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.hb svg {
+  width: 14px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+}
+
+.hb:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.hb.big {
+  height: 42px;
+  font-size: 17px;
+}
+
+.hb.big svg {
+  height: 42px;
+}
+
+/* bundle size ruler on the left edge */
+#ruler {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.rl {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid var(--hair);
+}
+
+.rl b {
+  position: absolute;
+  left: 22px;
+  top: -14px;
+  font: 700 10px/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+}
+
+#rmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+#rmark i {
+  width: 13px;
+  height: 26px;
+  background: var(--ink);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  margin-left: -1px;
+}
+
+#rsize {
+  font: 700 11px/1 var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+#hint {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  font: 400 13px/1 var(--font-body);
+  letter-spacing: 0.04em;
+}

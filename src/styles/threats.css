@@ -1,0 +1,101 @@
+/* "Threat" callouts with pulsing rings */
+.th {
+  right: 4px;
+  top: 50%;
+  width: min(520px, 100% - 8px);
+  height: 420px;
+  margin-top: -210px;
+  display: grid;
+  place-items: center;
+}
+
+.th .rings {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.th .rings i {
+  position: absolute;
+  width: 300px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(235, 245, 255, 0.55);
+  border-radius: 50%;
+  animation: ring 4s ease-out infinite;
+}
+
+.th .rings i:nth-child(2) {
+  animation-delay: -1.3s;
+}
+
+.th .rings i:nth-child(3) {
+  animation-delay: -2.6s;
+}
+
+.th h3 {
+  position: relative;
+  font: 400 clamp(20px, 2vw, 28px)/1.2 var(--font-body);
+}
+
+/* square variant */
+.th.sq .rings i {
+  border-radius: 0;
+  animation-name: square;
+}
+
+/* squeeze variant */
+.th.cr .rings i {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation-name: squeeze;
+}
+
+@keyframes ring {
+  from {
+    transform: scale(0.25);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+@keyframes square {
+  from {
+    transform: scale(0.25) rotate(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.15) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes squeeze {
+  0%,
+  100% {
+    transform: scale(1, 1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(0.35, 1.15);
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 760px) {
+  .th {
+    top: 18%;
+    margin-top: 0;
+    height: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .th .rings i {
+    animation: none;
+  }
+}

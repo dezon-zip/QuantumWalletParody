@@ -1,0 +1,33 @@
+:root {
+  color-scheme: dark;
+  --bg: #02060c;
+  --ink: #e8f0ff;
+  --hair: rgba(232, 240, 255, 0.1);
+  --accent: #61dafb;
+  --alert: #e0234e;
+  --font-head: 'Sora', system-ui, sans-serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+html {
+  background: var(--bg);
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--bg);
+  color: var(--ink);
+  font: 300 16px/1.55 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
